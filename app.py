@@ -1231,6 +1231,8 @@ def resume_preview():
         return jsonify({'found_in': 'folder_fallback', 'filename': name, 'data': data, 'analysis': analysis})
 
     return jsonify({'error': 'not found'}), 404
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Render provides the PORT environment variable
+    port = int(os.environ.get("PORT", 5000))
+    # Host must be 0.0.0.0 to be accessible
+    app.run(host="0.0.0.0", port=port, debug=True)
