@@ -1,0 +1,16 @@
+Flask
+pandas
+numpy
+mysql-connector-python
+requests
+
+# OCR & Image Processing
+pytesseract
+opencv-python
+Pillow
+
+# PDF Processing
+PyPDF2
+pdf2image
+reportlab
+pdfplumber

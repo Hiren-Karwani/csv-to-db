@@ -1,0 +1,546 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 284-463-541
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:40:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:40:07] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:40:07] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:40:07] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=ouYqRPiyNVVt4kqDrZuL HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:40:07] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\karwa\\Desktop\\csv to db\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 284-463-541
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:41:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:41:18] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:41:18] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:41:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:45:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:45:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:45:14] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:45:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:45:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:45:38] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:47:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:47:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:47:31] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Dec/2025 14:47:42] "POST /upload HTTP/1.1" 200 -
+2025-12-12 16:46:45,137 - INFO - Starting server on port 5000
+2025-12-12 16:46:45,169 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.22.200.44:5000
+2025-12-12 16:46:45,170 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-12 16:47:12,601 - ERROR - DB Connection Error: 2026 (HY000): SSL connection error: error:0A00010B:SSL routines::wrong version number
+2025-12-12 16:47:12,601 - INFO - 10.22.200.44 - - [12/Dec/2025 16:47:12] "GET / HTTP/1.1" 200 -
+2025-12-12 16:47:12,703 - INFO - 10.22.200.44 - - [12/Dec/2025 16:47:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-12 18:34:20,300 - INFO - Starting local Flask server on http://127.0.0.1:5000
+2025-12-12 18:34:20,401 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-12 18:34:20,401 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-12 18:34:20,411 - INFO -  * Restarting with stat
+2025-12-12 18:34:21,033 - INFO - Starting local Flask server on http://127.0.0.1:5000
+2025-12-12 18:34:21,045 - WARNING -  * Debugger is active!
+2025-12-12 18:34:21,050 - INFO -  * Debugger PIN: 413-579-329
+2025-12-12 18:35:09,307 - INFO - DB connected successfully.
+2025-12-12 18:35:12,029 - INFO - 127.0.0.1 - - [12/Dec/2025 18:35:12] "GET / HTTP/1.1" 200 -
+2025-12-12 18:35:12,150 - INFO - 127.0.0.1 - - [12/Dec/2025 18:35:12] "GET /static/style.css HTTP/1.1" 200 -
+2025-12-12 18:35:12,155 - INFO - 127.0.0.1 - - [12/Dec/2025 18:35:12] "GET /static/script.js HTTP/1.1" 200 -
+2025-12-12 18:35:12,205 - INFO - 127.0.0.1 - - [12/Dec/2025 18:35:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-12 18:35:42,867 - INFO - DB connected successfully.
+2025-12-12 18:35:54,907 - INFO - 127.0.0.1 - - [12/Dec/2025 18:35:54] "POST /upload HTTP/1.1" 200 -
+2025-12-12 18:50:43,276 - INFO -  * Detected change in 'C:\\Users\\karwa\\Downloads\\csv to db\\app.py', reloading
+2025-12-12 18:50:43,570 - INFO -  * Restarting with stat
+2025-12-12 18:50:44,758 - INFO - Starting local Flask server on http://127.0.0.1:5000
+2025-12-12 18:50:44,777 - WARNING -  * Debugger is active!
+2025-12-12 18:50:44,787 - INFO -  * Debugger PIN: 413-579-329
+2025-12-12 18:52:23,938 - INFO -  * Detected change in 'C:\\Users\\karwa\\Downloads\\csv to db\\app.py', reloading
+2025-12-12 18:52:24,211 - INFO -  * Restarting with stat
+2025-12-12 18:52:25,203 - INFO - Starting local Flask server on http://127.0.0.1:5000
+2025-12-12 18:52:25,215 - WARNING -  * Debugger is active!
+2025-12-12 18:52:25,220 - INFO -  * Debugger PIN: 413-579-329
+2025-12-12 18:53:09,569 - INFO - DB connected successfully.
+2025-12-12 18:53:10,311 - INFO - 127.0.0.1 - - [12/Dec/2025 18:53:10] "GET / HTTP/1.1" 200 -
+2025-12-12 18:53:10,517 - INFO - 127.0.0.1 - - [12/Dec/2025 18:53:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-12 18:53:10,528 - INFO - 127.0.0.1 - - [12/Dec/2025 18:53:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-12-12 18:53:29,895 - INFO - DB connected successfully.
+2025-12-12 18:53:56,086 - INFO - 127.0.0.1 - - [12/Dec/2025 18:53:56] "GET / HTTP/1.1" 200 -
+2025-12-12 18:53:56,144 - INFO - 127.0.0.1 - - [12/Dec/2025 18:53:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-12-12 18:53:56,147 - INFO - 127.0.0.1 - - [12/Dec/2025 18:53:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-12 19:13:36,503 - INFO - DB connected successfully.
+2025-12-12 19:13:38,074 - INFO - 127.0.0.1 - - [12/Dec/2025 19:13:38] "GET / HTTP/1.1" 200 -
+2025-12-12 19:13:38,152 - INFO - 127.0.0.1 - - [12/Dec/2025 19:13:38] "GET /static/style.css HTTP/1.1" 200 -
+2025-12-12 19:13:38,216 - INFO - 127.0.0.1 - - [12/Dec/2025 19:13:38] "GET /static/script.js HTTP/1.1" 200 -
+2025-12-12 19:28:58,563 - INFO - DB connected successfully.
+2025-12-12 19:28:59,135 - INFO - 127.0.0.1 - - [12/Dec/2025 19:28:59] "GET /table/customers HTTP/1.1" 200 -
+2025-12-14 15:03:22,359 - INFO - Starting local Flask server on http://127.0.0.1:5000
+2025-12-14 15:03:22,477 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-14 15:03:22,477 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-14 15:03:22,487 - INFO -  * Restarting with stat
+2025-12-14 15:03:23,327 - INFO - Starting local Flask server on http://127.0.0.1:5000
+2025-12-14 15:03:23,339 - WARNING -  * Debugger is active!
+2025-12-14 15:03:23,345 - INFO -  * Debugger PIN: 413-579-329
+2025-12-14 15:03:39,058 - INFO - DB connected successfully.
+2025-12-14 15:03:39,443 - INFO - 127.0.0.1 - - [14/Dec/2025 15:03:39] "GET / HTTP/1.1" 200 -
+2025-12-14 15:03:39,563 - INFO - 127.0.0.1 - - [14/Dec/2025 15:03:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-12-14 15:03:39,567 - INFO - 127.0.0.1 - - [14/Dec/2025 15:03:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-14 15:03:39,615 - INFO - 127.0.0.1 - - [14/Dec/2025 15:03:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-14 15:03:49,739 - INFO - DB connected successfully.
+2025-12-14 15:03:50,086 - INFO - 127.0.0.1 - - [14/Dec/2025 15:03:50] "GET /table/customers HTTP/1.1" 200 -
+2025-12-14 15:03:52,726 - INFO - DB connected successfully.
+2025-12-14 15:03:53,086 - INFO - 127.0.0.1 - - [14/Dec/2025 15:03:53] "GET /table/customers HTTP/1.1" 200 -
+2025-12-14 15:06:17,294 - INFO - DB connected successfully.
+2025-12-14 15:06:17,632 - INFO - 127.0.0.1 - - [14/Dec/2025 15:06:17] "GET /table/customers HTTP/1.1" 200 -
+2025-12-14 15:06:36,160 - INFO - DB connected successfully.
+2025-12-14 15:06:36,518 - INFO - 127.0.0.1 - - [14/Dec/2025 15:06:36] "GET / HTTP/1.1" 200 -
+2025-12-14 15:06:36,549 - INFO - 127.0.0.1 - - [14/Dec/2025 15:06:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-12-14 15:06:36,550 - INFO - 127.0.0.1 - - [14/Dec/2025 15:06:36] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-14 15:06:37,153 - INFO - DB connected successfully.
+2025-12-14 15:06:37,490 - INFO - 127.0.0.1 - - [14/Dec/2025 15:06:37] "GET /table/customers HTTP/1.1" 200 -
+2025-12-14 15:07:03,943 - INFO - DB connected successfully.
+2025-12-14 15:07:04,281 - INFO - 127.0.0.1 - - [14/Dec/2025 15:07:04] "GET /table/customers HTTP/1.1" 200 -
+2025-12-14 15:07:06,486 - INFO - DB connected successfully.
+2025-12-14 15:07:07,672 - INFO - 127.0.0.1 - - [14/Dec/2025 15:07:07] "GET /table/customers HTTP/1.1" 200 -
+2025-12-14 15:07:48,381 - INFO - DB connected successfully.
+2025-12-14 15:07:48,745 - INFO - 127.0.0.1 - - [14/Dec/2025 15:07:48] "GET /table/orders HTTP/1.1" 200 -
+2025-12-14 15:08:00,913 - INFO - DB connected successfully.
+2025-12-14 15:08:04,774 - INFO - 127.0.0.1 - - [14/Dec/2025 15:08:04] "POST /upload HTTP/1.1" 200 -
+2025-12-14 15:23:15,726 - INFO - DB connected successfully.
+2025-12-14 15:23:16,064 - INFO - 127.0.0.1 - - [14/Dec/2025 15:23:16] "GET / HTTP/1.1" 200 -
+2025-12-14 15:23:16,085 - INFO - 127.0.0.1 - - [14/Dec/2025 15:23:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-12-14 15:23:16,085 - INFO - 127.0.0.1 - - [14/Dec/2025 15:23:16] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-15 10:33:40,161 - INFO - Starting local Flask server on http://127.0.0.1:5000
+2025-12-15 10:33:40,278 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-15 10:33:40,278 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-15 10:33:40,288 - INFO -  * Restarting with stat
+2025-12-15 10:33:41,034 - INFO - Starting local Flask server on http://127.0.0.1:5000
+2025-12-15 10:33:41,047 - WARNING -  * Debugger is active!
+2025-12-15 10:33:41,053 - INFO -  * Debugger PIN: 413-579-329
+2025-12-15 10:33:46,289 - INFO - DB connected successfully.
+2025-12-15 10:33:46,650 - INFO - 127.0.0.1 - - [15/Dec/2025 10:33:46] "GET / HTTP/1.1" 200 -
+2025-12-15 10:33:46,764 - INFO - 127.0.0.1 - - [15/Dec/2025 10:33:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-12-15 10:33:46,764 - INFO - 127.0.0.1 - - [15/Dec/2025 10:33:46] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-15 10:33:46,816 - INFO - 127.0.0.1 - - [15/Dec/2025 10:33:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-16 22:21:18,601 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-16 22:21:18,602 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-16 22:21:24,633 - INFO - 192.168.1.112 - - [16/Dec/2025 22:21:24] "GET / HTTP/1.1" 200 -
+2025-12-16 22:21:24,796 - INFO - 192.168.1.112 - - [16/Dec/2025 22:21:24] "GET /static/styles.css HTTP/1.1" 200 -
+2025-12-16 22:21:24,836 - INFO - 192.168.1.112 - - [16/Dec/2025 22:21:24] "GET /static/script.js HTTP/1.1" 200 -
+2025-12-16 22:21:24,863 - INFO - 192.168.1.112 - - [16/Dec/2025 22:21:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-16 22:21:30,028 - ERROR - Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\karwa\Downloads\csv to db\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'csv_to_db_outsidedo.resumes' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\karwa\Downloads\csv to db\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\karwa\Downloads\csv to db\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\karwa\Downloads\csv to db\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\karwa\Downloads\csv to db\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\karwa\Downloads\csv to db\app.py", line 213, in search
+    cursor.execute(q, p)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\karwa\Downloads\csv to db\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\karwa\Downloads\csv to db\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\karwa\Downloads\csv to db\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'csv_to_db_outsidedo.resumes' doesn't exist
+2025-12-16 22:21:30,032 - INFO - 192.168.1.112 - - [16/Dec/2025 22:21:30] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+2025-12-16 22:23:42,764 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-16 22:23:42,764 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-16 22:23:46,809 - INFO - 192.168.1.112 - - [16/Dec/2025 22:23:46] "GET / HTTP/1.1" 200 -
+2025-12-16 22:23:46,962 - INFO - 192.168.1.112 - - [16/Dec/2025 22:23:46] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-16 22:23:46,967 - INFO - 192.168.1.112 - - [16/Dec/2025 22:23:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-16 22:23:52,930 - ERROR - DB query error in /search: 1146 (42S02): Table 'csv_to_db_outsidedo.resumes' doesn't exist
+2025-12-16 22:23:52,933 - INFO - 192.168.1.112 - - [16/Dec/2025 22:23:52] "GET /search HTTP/1.1" 200 -
+2025-12-16 22:23:52,973 - INFO - 192.168.1.112 - - [16/Dec/2025 22:23:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-16 22:24:38,707 - ERROR - HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError("HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2025-12-16 22:24:38,708 - INFO - 192.168.1.112 - - [16/Dec/2025 22:24:38] "POST /upload HTTP/1.1" 200 -
+2025-12-16 22:35:18,839 - INFO - 192.168.1.112 - - [16/Dec/2025 22:35:18] "GET / HTTP/1.1" 200 -
+2025-12-16 22:35:18,873 - INFO - 192.168.1.112 - - [16/Dec/2025 22:35:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-16 22:35:18,875 - INFO - 192.168.1.112 - - [16/Dec/2025 22:35:18] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-16 22:35:23,448 - ERROR - DB query error in /search: 1146 (42S02): Table 'csv_to_db_outsidedo.resumes' doesn't exist
+2025-12-16 22:35:23,448 - INFO - 192.168.1.112 - - [16/Dec/2025 22:35:23] "GET /search HTTP/1.1" 200 -
+2025-12-16 22:35:23,485 - INFO - 192.168.1.112 - - [16/Dec/2025 22:35:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-16 22:35:59,435 - INFO - 192.168.1.112 - - [16/Dec/2025 22:35:59] "POST /upload HTTP/1.1" 200 -
+2025-12-16 22:36:06,582 - INFO - 192.168.1.112 - - [16/Dec/2025 22:36:06] "GET /search HTTP/1.1" 200 -
+2025-12-16 22:36:06,626 - INFO - 192.168.1.112 - - [16/Dec/2025 22:36:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-16 22:36:13,268 - INFO - 192.168.1.112 - - [16/Dec/2025 22:36:13] "POST /upload HTTP/1.1" 200 -
+2025-12-22 14:51:12,358 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-22 14:51:12,358 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-22 14:51:16,007 - INFO - 127.0.0.1 - - [22/Dec/2025 14:51:16] "GET / HTTP/1.1" 200 -
+2025-12-22 14:51:16,148 - INFO - 127.0.0.1 - - [22/Dec/2025 14:51:16] "GET /static/styles.css HTTP/1.1" 200 -
+2025-12-22 14:51:16,164 - INFO - 127.0.0.1 - - [22/Dec/2025 14:51:16] "GET /static/script.js HTTP/1.1" 200 -
+2025-12-22 14:51:24,732 - INFO - 127.0.0.1 - - [22/Dec/2025 14:51:24] "GET /search HTTP/1.1" 200 -
+2025-12-22 14:51:24,766 - INFO - 127.0.0.1 - - [22/Dec/2025 14:51:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 14:51:27,593 - INFO - 127.0.0.1 - - [22/Dec/2025 14:51:27] "GET / HTTP/1.1" 200 -
+2025-12-22 14:51:27,624 - INFO - 127.0.0.1 - - [22/Dec/2025 14:51:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 14:51:27,626 - INFO - 127.0.0.1 - - [22/Dec/2025 14:51:27] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:10:55,647 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-22 15:10:55,647 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-22 15:16:25,037 - INFO - 127.0.0.1 - - [22/Dec/2025 15:16:25] "GET / HTTP/1.1" 200 -
+2025-12-22 15:16:25,066 - INFO - 127.0.0.1 - - [22/Dec/2025 15:16:25] "GET /static/script.js HTTP/1.1" 200 -
+2025-12-22 15:16:25,079 - INFO - 127.0.0.1 - - [22/Dec/2025 15:16:25] "GET /static/styles.css HTTP/1.1" 200 -
+2025-12-22 15:16:26,316 - INFO - 127.0.0.1 - - [22/Dec/2025 15:16:26] "GET / HTTP/1.1" 200 -
+2025-12-22 15:16:26,340 - INFO - 127.0.0.1 - - [22/Dec/2025 15:16:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:16:26,341 - INFO - 127.0.0.1 - - [22/Dec/2025 15:16:26] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:16:58,913 - INFO - 127.0.0.1 - - [22/Dec/2025 15:16:58] "POST /upload HTTP/1.1" 200 -
+2025-12-22 15:17:03,712 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:03] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:17:03,739 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:06,189 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:06] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:06,216 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:06,216 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:06] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:33,888 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:33] "POST /upload HTTP/1.1" 200 -
+2025-12-22 15:17:37,033 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:37] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:17:37,064 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:46,164 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:46] "GET /search?skill=cap HTTP/1.1" 200 -
+2025-12-22 15:17:46,191 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:49,914 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:49] "GET /search?skill=cap HTTP/1.1" 200 -
+2025-12-22 15:17:49,938 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:51,173 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:51] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:51,199 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:51,200 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:51] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:52,755 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:52] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:52,780 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:52,781 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:52] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:53,316 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:53,341 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:53,342 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:53,503 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:53,527 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:53,528 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:53,693 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:53,718 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:53,719 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:53,877 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:53,904 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:53,905 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:53] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,055 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:54,080 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,081 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,217 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:54,241 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,243 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,409 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:54,434 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,436 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,598 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:54,623 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,623 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,789 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "GET / HTTP/1.1" 200 -
+2025-12-22 15:17:54,811 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:17:54,813 - INFO - 127.0.0.1 - - [22/Dec/2025 15:17:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:18:22,173 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-22 15:18:22,174 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-22 15:18:25,217 - INFO - 127.0.0.1 - - [22/Dec/2025 15:18:25] "GET / HTTP/1.1" 200 -
+2025-12-22 15:18:25,351 - INFO - 127.0.0.1 - - [22/Dec/2025 15:18:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:18:25,356 - INFO - 127.0.0.1 - - [22/Dec/2025 15:18:25] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:18:32,168 - INFO - 127.0.0.1 - - [22/Dec/2025 15:18:32] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:18:32,205 - INFO - 127.0.0.1 - - [22/Dec/2025 15:18:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:18:34,002 - INFO - 127.0.0.1 - - [22/Dec/2025 15:18:34] "GET / HTTP/1.1" 200 -
+2025-12-22 15:18:34,034 - INFO - 127.0.0.1 - - [22/Dec/2025 15:18:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:18:34,036 - INFO - 127.0.0.1 - - [22/Dec/2025 15:18:34] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:21:39,293 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:39] "GET / HTTP/1.1" 200 -
+2025-12-22 15:21:39,333 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:39] "GET /static/styles.css HTTP/1.1" 200 -
+2025-12-22 15:21:39,346 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:39] "GET /static/script.js HTTP/1.1" 200 -
+2025-12-22 15:21:40,525 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-22 15:21:44,389 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:44] "GET / HTTP/1.1" 200 -
+2025-12-22 15:21:44,418 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:21:44,419 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:21:44,870 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:44] "GET / HTTP/1.1" 200 -
+2025-12-22 15:21:44,898 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:21:44,899 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:21:45,322 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:45] "GET / HTTP/1.1" 200 -
+2025-12-22 15:21:45,351 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:21:45,352 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:45] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:21:45,788 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:45] "GET / HTTP/1.1" 200 -
+2025-12-22 15:21:45,815 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:21:45,817 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:45] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:21:46,242 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:46] "GET / HTTP/1.1" 200 -
+2025-12-22 15:21:46,270 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:21:46,271 - INFO - 127.0.0.1 - - [22/Dec/2025 15:21:46] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:22:06,147 - INFO - 127.0.0.1 - - [22/Dec/2025 15:22:06] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:22:06,187 - INFO - 127.0.0.1 - - [22/Dec/2025 15:22:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:22:07,569 - INFO - 127.0.0.1 - - [22/Dec/2025 15:22:07] "GET / HTTP/1.1" 200 -
+2025-12-22 15:22:07,606 - INFO - 127.0.0.1 - - [22/Dec/2025 15:22:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:22:07,608 - INFO - 127.0.0.1 - - [22/Dec/2025 15:22:07] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:40,439 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:40] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:40,472 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:40,474 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:40] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:41,049 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:41,083 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:41,084 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:41,423 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:41,452 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:41,453 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:41,654 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:41,685 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:41,687 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:41,852 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:41,880 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:41,881 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,068 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:42,098 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,099 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,270 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:42,300 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,301 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,469 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:42,499 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,500 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,648 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:42,681 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,682 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,834 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:42,861 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:42,862 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,034 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:43,062 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,062 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,228 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:43,256 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,257 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,434 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:43,460 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,461 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,613 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:43,642 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,643 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,815 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:43,846 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,847 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:23:43,990 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:43] "GET / HTTP/1.1" 200 -
+2025-12-22 15:23:44,020 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:23:44,021 - INFO - 127.0.0.1 - - [22/Dec/2025 15:23:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:26:05,417 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:05] "GET / HTTP/1.1" 200 -
+2025-12-22 15:26:05,449 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:26:05,451 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:05] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:26:06,074 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:06] "GET / HTTP/1.1" 200 -
+2025-12-22 15:26:06,103 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:26:06,104 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:06] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:26:19,318 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-22 15:26:19,319 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-22 15:26:26,797 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:26] "GET / HTTP/1.1" 200 -
+2025-12-22 15:26:26,914 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:26:26,921 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:26] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:26:31,978 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:31] "GET / HTTP/1.1" 200 -
+2025-12-22 15:26:32,006 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:26:32,007 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:32] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:26:36,683 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:36] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:26:36,723 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:26:36,725 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:36] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:26:40,748 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:40] "GET / HTTP/1.1" 200 -
+2025-12-22 15:26:40,789 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:26:40,791 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:40] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:26:44,807 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:44] "GET / HTTP/1.1" 200 -
+2025-12-22 15:26:44,839 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:26:44,840 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:26:48,076 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:48] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:26:48,115 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:26:48,117 - INFO - 127.0.0.1 - - [22/Dec/2025 15:26:48] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:27:13,058 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:13] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:27:14,730 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:14] "GET / HTTP/1.1" 200 -
+2025-12-22 15:27:14,769 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:27:14,770 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:14] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:27:56,219 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:56] "GET / HTTP/1.1" 200 -
+2025-12-22 15:27:56,251 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:27:56,253 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:27:59,750 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:59] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:27:59,788 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:27:59,789 - INFO - 127.0.0.1 - - [22/Dec/2025 15:27:59] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:28:03,933 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:03] "GET / HTTP/1.1" 200 -
+2025-12-22 15:28:03,970 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:28:03,972 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:03] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:28:07,190 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:07] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:28:07,226 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:28:07,227 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:07] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:28:10,756 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:10] "GET / HTTP/1.1" 200 -
+2025-12-22 15:28:10,796 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:28:10,797 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:28:14,130 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:14] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:28:14,169 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:28:14,171 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:14] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:28:26,046 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:26] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:28:26,075 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:28:26,076 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:26] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:28:31,506 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:31] "GET / HTTP/1.1" 200 -
+2025-12-22 15:28:31,547 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:28:31,549 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:31] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:28:35,211 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:35] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:28:35,249 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:28:35,251 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:35] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:28:58,810 - INFO - 127.0.0.1 - - [22/Dec/2025 15:28:58] "POST /chat HTTP/1.1" 200 -
+2025-12-22 15:29:16,077 - INFO - 127.0.0.1 - - [22/Dec/2025 15:29:16] "POST /chat HTTP/1.1" 200 -
+2025-12-22 15:29:59,560 - INFO - 127.0.0.1 - - [22/Dec/2025 15:29:59] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:29:59,592 - INFO - 127.0.0.1 - - [22/Dec/2025 15:29:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:29:59,593 - INFO - 127.0.0.1 - - [22/Dec/2025 15:29:59] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:30:03,129 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:03] "GET / HTTP/1.1" 200 -
+2025-12-22 15:30:03,167 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:30:03,169 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:03] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:30:06,522 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:06] "GET / HTTP/1.1" 200 -
+2025-12-22 15:30:06,554 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:30:06,556 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:06] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:30:09,624 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:09] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:30:09,664 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:30:09,665 - INFO - 127.0.0.1 - - [22/Dec/2025 15:30:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:31:26,600 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:26] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:31:26,630 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:31:26,632 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:26] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:31:33,053 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:33] "GET / HTTP/1.1" 200 -
+2025-12-22 15:31:33,093 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:31:33,094 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:33] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:31:36,515 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:36] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:31:36,566 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:31:36,567 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:36] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:31:39,505 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:39] "GET / HTTP/1.1" 200 -
+2025-12-22 15:31:39,547 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:31:39,549 - INFO - 127.0.0.1 - - [22/Dec/2025 15:31:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:32:53,422 - INFO - 127.0.0.1 - - [22/Dec/2025 15:32:53] "GET / HTTP/1.1" 200 -
+2025-12-22 15:32:53,455 - INFO - 127.0.0.1 - - [22/Dec/2025 15:32:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:32:53,457 - INFO - 127.0.0.1 - - [22/Dec/2025 15:32:53] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:33:00,564 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-22 15:33:00,564 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-22 15:33:03,748 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:03] "GET / HTTP/1.1" 200 -
+2025-12-22 15:33:03,873 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:33:03,882 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:03] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:33:10,726 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:10] "GET /dashboard HTTP/1.1" 200 -
+2025-12-22 15:33:10,768 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:33:10,769 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:33:13,727 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:13] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:33:13,772 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:33:13,774 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:33:14,619 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:14] "[33mGET /upload HTTP/1.1[0m" 404 -
+2025-12-22 15:33:39,170 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:39] "GET /search HTTP/1.1" 200 -
+2025-12-22 15:33:39,200 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:33:39,201 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-22 15:33:40,816 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:40] "[33mGET /upload HTTP/1.1[0m" 404 -
+2025-12-22 15:33:43,587 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:43] "GET /uploads HTTP/1.1" 200 -
+2025-12-22 15:33:43,628 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-22 15:33:43,632 - INFO - 127.0.0.1 - - [22/Dec/2025 15:33:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-24 17:05:31,465 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-24 17:05:31,466 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-24 17:05:34,438 - INFO - 127.0.0.1 - - [24/Dec/2025 17:05:34] "GET / HTTP/1.1" 200 -
+2025-12-24 17:05:34,619 - INFO - 127.0.0.1 - - [24/Dec/2025 17:05:34] "GET /static/styles.css HTTP/1.1" 200 -
+2025-12-24 17:05:34,630 - INFO - 127.0.0.1 - - [24/Dec/2025 17:05:34] "GET /static/script.js HTTP/1.1" 200 -
+2025-12-24 17:05:34,764 - INFO - 127.0.0.1 - - [24/Dec/2025 17:05:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-24 17:06:02,650 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:02] "GET /search HTTP/1.1" 200 -
+2025-12-24 17:06:02,685 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-24 17:06:02,687 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:02] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-24 17:06:05,530 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:05] "GET /uploads HTTP/1.1" 200 -
+2025-12-24 17:06:05,573 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-24 17:06:05,574 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:05] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-24 17:06:08,849 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:08] "GET /dashboard HTTP/1.1" 200 -
+2025-12-24 17:06:08,883 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-12-24 17:06:08,884 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-12-24 17:06:54,898 - INFO - 127.0.0.1 - - [24/Dec/2025 17:06:54] "POST /chat HTTP/1.1" 200 -
+2025-12-24 17:15:46,911 - INFO - 127.0.0.1 - - [24/Dec/2025 17:15:46] "GET /preview/sem%207%20endsems.pdf HTTP/1.1" 200 -
+2025-12-24 17:15:54,157 - INFO - 127.0.0.1 - - [24/Dec/2025 17:15:54] "GET /preview/Hiren%20Karwani%20Resume.pdf HTTP/1.1" 200 -
+2025-12-24 17:15:59,249 - INFO - 127.0.0.1 - - [24/Dec/2025 17:15:59] "GET /preview/customers.csv HTTP/1.1" 200 -
+2025-12-24 17:16:09,898 - INFO - 127.0.0.1 - - [24/Dec/2025 17:16:09] "GET /preview/orders.csv HTTP/1.1" 200 -
+2025-12-25 10:25:56,758 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2025-12-25 10:25:56,759 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-04 23:54:59,865 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2026-01-04 23:54:59,865 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-04 23:55:06,678 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:06] "GET / HTTP/1.1" 200 -
+2026-01-04 23:55:07,347 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-04 23:55:07,381 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:07] "GET /static/script.js HTTP/1.1" 200 -
+2026-01-04 23:55:07,527 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-04 23:55:12,351 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:12] "GET /search HTTP/1.1" 200 -
+2026-01-04 23:55:12,391 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-04 23:55:12,393 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:12] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-01-04 23:55:18,701 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:18] "GET /dashboard HTTP/1.1" 200 -
+2026-01-04 23:55:18,741 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-04 23:55:18,744 - INFO - 127.0.0.1 - - [04/Jan/2026 23:55:18] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-01-06 01:01:22,979 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.112:5000
+2026-01-06 01:01:22,979 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 01:01:28,469 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:28] "GET / HTTP/1.1" 200 -
+2026-01-06 01:01:28,665 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:28] "GET /static/styles.css HTTP/1.1" 200 -
+2026-01-06 01:01:28,687 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:28] "GET /static/script.js HTTP/1.1" 200 -
+2026-01-06 01:01:32,541 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:32] "GET /search HTTP/1.1" 200 -
+2026-01-06 01:01:32,577 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-06 01:01:32,579 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:32] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-01-06 01:01:34,733 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:34] "GET / HTTP/1.1" 200 -
+2026-01-06 01:01:34,767 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-06 01:01:34,769 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:34] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-01-06 01:01:38,090 - INFO - 127.0.0.1 - - [06/Jan/2026 01:01:38] "[33mPOST /upload HTTP/1.1[0m" 404 -
+2026-01-06 01:02:52,423 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:52] "GET / HTTP/1.1" 200 -
+2026-01-06 01:02:52,454 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:52] "GET /static/styles.css HTTP/1.1" 200 -
+2026-01-06 01:02:52,454 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:52] "GET /static/script.js HTTP/1.1" 200 -
+2026-01-06 01:02:54,802 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:54] "GET /search HTTP/1.1" 200 -
+2026-01-06 01:02:54,829 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-06 01:02:54,830 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-01-06 01:02:56,522 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:56] "GET / HTTP/1.1" 200 -
+2026-01-06 01:02:56,551 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-06 01:02:56,552 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-01-06 01:02:59,546 - INFO - 127.0.0.1 - - [06/Jan/2026 01:02:59] "[33mPOST /upload HTTP/1.1[0m" 404 -
+2026-01-06 01:03:07,209 - INFO - 127.0.0.1 - - [06/Jan/2026 01:03:07] "GET /search HTTP/1.1" 200 -
+2026-01-06 01:03:07,235 - INFO - 127.0.0.1 - - [06/Jan/2026 01:03:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-06 01:03:07,237 - INFO - 127.0.0.1 - - [06/Jan/2026 01:03:07] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-01-06 01:03:08,790 - INFO - 127.0.0.1 - - [06/Jan/2026 01:03:08] "GET / HTTP/1.1" 200 -
+2026-01-06 01:03:08,820 - INFO - 127.0.0.1 - - [06/Jan/2026 01:03:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2026-01-06 01:03:08,821 - INFO - 127.0.0.1 - - [06/Jan/2026 01:03:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -

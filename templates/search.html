@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Search & ATS Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <style>
+    /* ATS Badges */
+    .ats-badge {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .score-high { background-color: #c6f6d5; color: #22543d; border: 1px solid #9ae6b4; }
+    .score-med { background-color: #feebc8; color: #744210; border: 1px solid #fbd38d; }
+    .score-low { background-color: #fed7d7; color: #742a2a; border: 1px solid #feb2b2; }
+    
+    /* Modal Styling */
+    .modal-section { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
+    .modal-section:last-child { border-bottom: none; margin-bottom: 0; }
+    .modal-h4 { color: #2d3748; margin-bottom: 12px; font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+    
+    .recommendation-list { padding-left: 20px; }
+    .recommendation-list li { margin-bottom: 8px; color: #4a5568; line-height: 1.5; }
+    
+    .sample-box {
+        background: #2d3748;
+        color: #e2e8f0;
+        padding: 20px;
+        border-radius: 8px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        border: 1px solid #4a5568;
+    }
+
+    .check-btn {
+        background: #fff;
+        border: 1px solid #cbd5e0;
+        color: #4a5568;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: all 0.2s;
+    }
+    .check-btn:hover { background: #edf2f7; border-color: #a0aec0; }
+    
+    .analyze-btn {
+        background-color: #667eea;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: background 0.2s;
+    }
+    .analyze-btn:hover { background-color: #5a67d8; }
+  </style>
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+    <nav class="sidebar">
+        <h2>📊 DataHub</h2>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/">Upload</a>
+        <a href="/search" class="active">Search Resumes</a>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; margin-bottom:25px;">
+              <h2>🔍 Find & Analyze Talent</h2>
+              <button class="button" onclick="compareAllScores()" style="background-color:#805ad5; display:flex; align-items:center; gap:8px;">
+                  <span>📊</span> Compare All ATS Scores
+              </button>
+          </div>
+
+          <form action="/search" method="get" style="background:white; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.05); display:flex; gap:10px; margin-bottom:25px;">
+            <input name="skill" class="search-input" style="flex:1;" placeholder="e.g., Python, SQL, Design..." value="{{ request.args.get('skill', '') }}">
+            <button type="submit" class="button">Search</button>
+          </form>
+
+          {% if error %}
+            <div style="background:#fff5f5; color:#c53030; padding:15px; border-radius:8px; margin-bottom:20px; border-left:4px solid #fc8181;">
+                {{ error }}
+            </div>
+          {% endif %}
+
+          <div class="table-responsive" style="background:white; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,0.05); overflow:hidden;">
+            <table id="results-table">
+              <thead style="background:#f7fafc;">
+                <tr>
+                  <th style="padding:15px 20px;">Name / Email</th>
+                  <th>Skills</th>
+                  <th>Experience</th>
+                  <th style="text-align:center;">ATS Score</th>
+                  <th style="text-align:center;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for r in results %}
+                <tr id="row-{{ loop.index }}" style="border-bottom:1px solid #edf2f7;">
+                  <td style="padding:15px 20px;">
+                      <div style="font-weight:700; color:#2d3748; font-size:1.05rem;">{{ r.name }}</div>
+                      <div style="color:#718096; font-size:0.85rem; margin-top:2px;">{{ r.email }}</div>
+                  </td>
+                  <td>
+                    {% if r.skills == 'Unprocessed (Not in DB)' %}
+                        <span style="color:#e53e3e; font-weight:bold; font-size:0.85rem;">⚠ Not in DB</span>
+                        <div style="font-size:0.75rem; color:#718096;">Click "Analyze" to process</div>
+                    {% elif r.skills %}
+                        <div style="max-width:250px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#4a5568;" title="{{ r.skills }}">
+                            {{ r.skills }}
+                        </div>
+                    {% else %}
+                        <span style="color:#cbd5e0; font-style:italic;">No skills listed</span>
+                    {% endif %}
+                  </td>
+                  <td>
+                      {% if r.experience %}
+                        <span style="background:#ebf8ff; color:#2b6cb0; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">
+                            {{ r.experience }}
+                        </span>
+                      {% else %}
+                        <span style="color:#a0aec0;">N/A</span>
+                      {% endif %}
+                  </td>
+                  <td class="ats-cell" data-name="{{ r.identifier or r.name }}" style="text-align:center;">
+                      <button class="check-btn" onclick="fetchScore(this, '{{ r.identifier or r.name }}')">Check Score</button>
+                  </td>
+                  <td style="text-align:center;">
+                    <button class="analyze-btn" onclick="viewResume('{{ r.identifier or r.name }}')">Analyze</button>
+                  </td>
+                </tr>
+              {% else %}
+                <tr>
+                    <td colspan="5" style="padding: 50px; text-align:center;">
+                        <div style="font-size:3rem; margin-bottom:10px;">📂</div>
+                        <div style="color: #a0aec0; font-size:1.1rem;">No resumes found in database or uploads.</div>
+                        <a href="/" style="display:inline-block; margin-top:15px; color:#667eea; text-decoration:none; font-weight:600;">Upload a Resume →</a>
+                    </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+          {% if ranking and ranking|length %}
+            <div style="margin-top:30px; background:white; padding:25px; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
+              <h3 style="margin-bottom:15px; color:#2d3748;">🏆 Top Ranked Candidates for "{{ request.args.get('skill', '') }}"</h3>
+              <ul style="list-style:none; padding:0;">
+                {% for name,score in ranking[:5] %}
+                  <li style="padding:10px; border-bottom:1px solid #edf2f7; display:flex; justify-content:space-between; align-items:center;">
+                      <span style="font-weight:600; color:#4a5568;">#{{ loop.index }} {{ name }}</span>
+                      <span style="background:#edf2f7; color:#4a5568; padding:4px 10px; border-radius:12px; font-size:0.9rem; font-weight:bold;">{{ score }} matches</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+          <div id="resume-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:2000; align-items:center; justify-content:center; backdrop-filter:blur(3px);">
+            <div style="background:white; padding:0; border-radius:16px; width:90%; max-width:850px; max-height:85vh; overflow:hidden; display:flex; flex-direction:column; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+              
+              <div style="padding:20px 25px; border-bottom:1px solid #edf2f7; display:flex; justify-content:space-between; align-items:center; background:#f9fafb;">
+                  <h3 id="modal-title" style="margin:0; font-size:1.25rem; color:#1a202c;">Resume Analysis</h3>
+                  <button onclick="document.getElementById('resume-modal').style.display='none'" style="background:none; border:none; font-size:1.8rem; cursor:pointer; color:#a0aec0; line-height:1;">&times;</button>
+              </div>
+
+              <div id="modal-body" style="padding:25px; overflow-y:auto;">
+                  Loading analysis...
+              </div>
+            </div>
+          </div>
+
+          <script>
+            // 1. Fetch Score for a single resume
+            function fetchScore(btn, name) {
+                btn.innerText = "Scanning...";
+                btn.disabled = true;
+                fetch('/resume_preview?name=' + encodeURIComponent(name))
+                .then(r => r.json())
+                .then(data => {
+                    if(data.analysis && data.analysis.score !== undefined) {
+                        const score = data.analysis.score;
+                        let colorClass = score >= 8 ? 'score-high' : (score >= 5 ? 'score-med' : 'score-low');
+                        // Replace button with badge
+                        btn.parentElement.innerHTML = `<span class="ats-badge ${colorClass}">${score} / 10</span>`;
+                    } else {
+                        btn.parentElement.innerHTML = `<span style="color:#a0aec0; font-size:0.9rem;">N/A</span>`;
+                    }
+                })
+                .catch(e => { 
+                    btn.innerText = "Retry"; 
+                    btn.disabled = false;
+                });
+            }
+
+            // 2. Compare All Logic
+            function compareAllScores() {
+                const buttons = document.querySelectorAll('.check-btn');
+                buttons.forEach((btn, index) => {
+                    // Stagger calls slightly to avoid browser freezing
+                    setTimeout(() => {
+                        const name = btn.parentElement.getAttribute('data-name');
+                        if(name) fetchScore(btn, name);
+                    }, index * 100); 
+                });
+            }
+
+            // 3. View Full Analysis in Modal
+            function viewResume(name){
+              const modal = document.getElementById('resume-modal');
+              const body = document.getElementById('modal-body');
+              const title = document.getElementById('modal-title');
+              
+              modal.style.display = 'flex';
+              title.innerText = 'Analyzing: ' + name; 
+              body.innerHTML = `
+                <div style="text-align:center; padding:40px;">
+                    <div style="font-size:2rem; margin-bottom:15px;">🤖</div>
+                    <p style="color:#4a5568; font-weight:600;">Analyzing resume against ATS standards...</p>
+                    <p style="color:#a0aec0; font-size:0.9rem;">Checking formatting, keywords, and structure.</p>
+                </div>`;
+              
+              fetch('/resume_preview?name=' + encodeURIComponent(name))
+                .then(r => r.json())
+                .then(j => {
+                  if (j.error){ 
+                      body.innerHTML = '<p style="color:#e53e3e; text-align:center;">Resume not found or could not be analyzed.</p>'; 
+                      return; 
+                  }
+                  
+                  title.innerText = 'Analysis: ' + (j.data && j.data.name ? j.data.name : (j.filename || name));
+                  const analysis = j.analysis || {};
+                  const score = analysis.score || 0;
+                  
+                  // Determine score color
+                  let color = score >= 8 ? '#38a169' : (score >= 5 ? '#dd6b20' : '#e53e3e');
+                  let verdict = score >= 8 ? 'Excellent' : (score >= 5 ? 'Needs Improvement' : 'Critical Issues Found');
+
+                  let html = '';
+                  
+                  // --- Score Section ---
+                  html += `<div class="modal-section" style="text-align:center; padding-bottom:30px;">
+                             <div style="font-size:0.85rem; text-transform:uppercase; color:#718096; letter-spacing:1px; margin-bottom:5px;">ATS Compatibility Score</div>
+                             <div style="font-size:4rem; font-weight:800; color:${color}; line-height:1;">${score}</div>
+                             <div style="color:${color}; font-weight:700; font-size:1.1rem; margin-top:5px;">${verdict}</div>
+                           </div>`;
+
+                  // --- Improvements Section ---
+                  html += `<div class="modal-section">
+                             <div class="modal-h4"><span>🔧</span> Actionable Improvements</div>`;
+                  if (analysis.improvements && analysis.improvements.length){
+                    html += '<ul class="recommendation-list">' + analysis.improvements.map(i=>`<li>${i}</li>`).join('') + '</ul>';
+                  } else {
+                    html += '<p style="color:#48bb78; font-weight:600;">✅ No major issues found. This resume is well-optimized!</p>';
+                  }
+                  html += `</div>`;
+
+                  // --- Sample Format Section ---
+                  html += `<div class="modal-section">
+                             <div class="modal-h4"><span>📝</span> Recommended ATS Format</div>
+                             <p style="font-size:0.9rem; color:#718096; margin-bottom:15px;">Below is a text-based structure optimized for parsing algorithms:</p>
+                             <div class="sample-box">${analysis.sample || 'No sample generated.'}</div>
+                           </div>`;
+
+                  body.innerHTML = html;
+                })
+                .catch(e=>{ 
+                    body.innerHTML = '<p style="color:#e53e3e; text-align:center;">Error loading analysis. Please try again.</p>'; 
+                });
+            }
+          </script>
+        </div>
+    </main>
+</div>
+
+<div id="chat-widget">
+  <div class="chat-header" onclick="toggleChat()">
+    <span>🤖 Ask AI</span>
+    <span id="toggle-icon">▲</span>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg bot">Hi! I can analyze resumes for you. Try asking "Compare ATS scores" or "Who is the best candidate?".</div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type a question..." onkeypress="handleEnter(event)">
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

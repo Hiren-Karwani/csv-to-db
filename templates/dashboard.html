@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* File Grid Styles */
+    .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+    .file-card { background: #f8fafc; border: 1px solid #edf2f7; border-radius: 12px; padding: 15px; text-align: left; transition: 0.2s; word-wrap: break-word; }
+    .file-card:hover { border-color: var(--primary-color); transform: translateY(-2px); }
+    .file-name { font-weight: bold; margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .file-action { color: var(--primary-color); cursor: pointer; font-size: 0.9rem; margin-right: 10px; font-weight: 700; }
+
+    /* Preview Box Styles */
+    .preview-box { margin-top: 20px; background: white; padding: 12px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: none; overflow: auto; border: 1px solid #edf2f7; max-height: 420px; }
+    .preview-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-top: 10px; table-layout: fixed; word-break: break-word; }
+    .preview-table th { background: #eee; padding: 8px; text-align: left; white-space: nowrap; font-size:0.78rem; }
+    .preview-table td { border-bottom: 1px solid #eee; padding: 8px; white-space: normal; font-size:0.78rem; }
+    .preview-table tr:nth-child(even) { background: #f9f9f9; }
+    .preview-box .preview-table td, .preview-box .preview-table th { max-width: 260px; overflow: hidden; text-overflow: ellipsis; }
+  </style>
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+  <nav class="sidebar">
+    <h2>📊 DataHub</h2>
+    <a href="/dashboard" class="active">Dashboard</a>
+    <a href="/">Upload</a>
+    <a href="/search">Search Resumes</a>
+  </nav>
+
+  <main class="main-content">
+    <header>
+      <h1>Hello! 👋</h1>
+      <p>Here is what's happening with your documents.</p>
+    </header>
+
+    <div class="stats-grid">
+      <div class="card stat-card">
+        <h3>Total Documents</h3>
+        <p class="big-number">{{ stats.total if stats else 0 }}</p>
+      </div>
+
+      {% if stats and stats.by_type %}
+        {% for type, count in stats.by_type.items() %}
+          <div class="card stat-card">
+            <h3>{{ type|replace('_', ' ')|title }}</h3>
+            <p class="big-number">{{ count }}</p>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="card chart-container">
+      <h3>Document Distribution</h3>
+      <div style="height: 300px; width: 100%;">
+        <canvas id="docChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 30px;">
+      <h3>📂 Uploaded Files</h3>
+
+      <div class="file-grid">
+        {% for f in files %}
+          <div class="file-card">
+            <div class="file-name" title="{{ f }}">📄 {{ f }}</div>
+            <div>
+              <span class="file-action" data-filename="{{ f }}" onclick="loadPreview(this.getAttribute('data-filename'))">👁 Preview</span>
+              <a href="/uploads/{{ f }}" target="_blank" class="file-action">⬇ Download</a>
+            </div>
+          </div>
+        {% else %}
+          <p style="color: #aaa; margin-top: 10px;">No files uploaded yet.</p>
+        {% endfor %}
+      </div>
+
+      <div id="preview-area" class="preview-box">
+        <h4 style="margin: 0; color: var(--secondary-color);">File Preview: <span id="preview-title" style="color: #333;"></span></h4>
+        <div id="preview-content">Loading...</div>
+        <button onclick="document.getElementById('preview-area').style.display='none'" class="button" style="margin-top: 15px; padding: 8px 20px; font-size: 0.8rem;">Close Preview</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="chat-widget">
+  <div class="chat-header" onclick="toggleChat()">
+    <span>🤖 Ask AI</span>
+    <span id="toggle-icon">▲</span>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg bot">Hi! I can read your uploaded files. Ask me anything!</div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type a question..." onkeypress="handleEnter(event)">
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const chartCanvas = document.getElementById('docChart');
+  if (chartCanvas) {
+    const rawData = {{ stats.by_type | default({}) | tojson | safe }};
+    const labels = Object.keys(rawData || {});
+    const values = Object.values(rawData || {});
+
+    if (labels.length > 0) {
+      const ctx = chartCanvas.getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: labels,
+          datasets: [{ data: values, backgroundColor: ['#4ECDC4', '#FF6B6B', '#FFE66D', '#1A535C', '#F7FFF7'], borderWidth: 0 }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { font: { family: 'Nunito' } } } } }
+      });
+    } else {
+      chartCanvas.style.display = 'none';
+      const container = chartCanvas.parentElement;
+      if (container) {
+        container.innerHTML = '<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; color:#cbd5e0;">'<
+          + '<span style="font-size: 2rem;">📊</span>'
+          + '<p>No document data found.</p>'
+          + '</div>';
+      }
+    }
+  }
+
+  window.loadPreview = function(filename) {
+    if (!filename) return;
+    const area = document.getElementById('preview-area');
+    const content = document.getElementById('preview-content');
+    const title = document.getElementById('preview-title');
+    if (area && content && title) {
+      area.style.display = 'block';
+      title.innerText = filename;
+      content.innerHTML = '<p style="color:#666;">Loading preview...</p>';
+      fetch(`/preview/${encodeURIComponent(filename)}`)
+        .then(res => res.text())
+        .then(html => { content.innerHTML = html; })
+        .catch(err => { console.error(err); content.innerHTML = "<p style='color:var(--secondary-color);'>Error loading preview. Try downloading the file.</p>"; });
+      area.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+});
+</script>
+
+</body>
+</html>

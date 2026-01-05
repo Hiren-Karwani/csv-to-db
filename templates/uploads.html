@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Upload</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+    <nav class="sidebar">
+        <h2>📊 DataHub</h2>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/uploads" class="active">Upload</a>
+        <a href="/search">Search Resumes</a>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <h2>🚀 Upload Data</h2>
+            
+            <div id="drop-area">
+                <div class="icon-upload">📂</div>
+                <p>Drag & Drop CSV or PDF files here</p>
+                <p style="font-size: 0.8rem; opacity: 0.6;">or click to browse</p>
+                <input type="file" id="csv-files" multiple>
+            </div>
+
+            <div id="file-list-display"></div>
+
+            <button id="uploadBtn" class="button" disabled>Start Upload</button>
+
+            <div class="progress-container">
+                <div id="progress"></div>
+            </div>
+
+            <div id="result"></div>
+
+            <br>
+            <a href="/search" class="button secondary-btn">🔍 Search Resumes</a>
+        </div>
+    </main>
+</div>
+
+<div id="chat-widget">
+  <div class="chat-header" onclick="toggleChat()">
+    <span>🤖 Ask AI</span>
+    <span id="toggle-icon">▲</span>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg bot">Hi! I can read your uploaded files. Ask me anything!</div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type a question..." onkeypress="handleEnter(event)">
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
